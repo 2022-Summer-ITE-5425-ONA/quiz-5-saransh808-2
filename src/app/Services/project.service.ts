@@ -9,7 +9,7 @@ export interface Output {
 
 export interface IProject {
   // _id: string;
-  title: number;
+  title: string;
   description: string;
   category: string;
   // date: string;
@@ -28,15 +28,18 @@ export class ProjectService {
     return this.http.get<Output>(this.url);
   }
 
-  addProject(ti: string, desc:string, cat:string): Observable<IProject> {
+  addProject(ti: string, desc:string, cat:string): Observable<any>{
     
     console.log(ti);
     console.log(desc);
     console.log(cat);
-    return this.http.post<IProject>('https://node-todo-2021.herokuapp.com/projects', {
+    let data:IProject = {
       title: ti,
       description: desc,
       category: cat
-    });
+    }
+    console.log(data);
+    console.log("TEST");
+    return this.http.post('https://node-todo-2021.herokuapp.com/projects', data);
   }
 }

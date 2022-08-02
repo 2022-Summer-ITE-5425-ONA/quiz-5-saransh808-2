@@ -31,7 +31,7 @@ export class AddprojectComponent implements OnInit {
       this.projectForm.value.title!,
       this.projectForm.value.description!,
       this.projectForm.value.category!
-    );
+    ).subscribe();
     
   }
 
