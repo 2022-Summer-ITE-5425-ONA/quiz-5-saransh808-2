@@ -18,8 +18,8 @@ export class ProjectComponent implements OnInit {
     
   }
 
-  addProject() {
-    this.myProjectService.addProject().subscribe((data) => console.log(data));
-  }
+  // addProject() {
+  //   this.myProjectService.addProject().subscribe((data) => console.log(data));
+  // }
 
 }

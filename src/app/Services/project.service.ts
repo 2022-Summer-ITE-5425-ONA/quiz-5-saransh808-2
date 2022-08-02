@@ -8,11 +8,11 @@ export interface Output {
 }
 
 export interface IProject {
-  _id: string;
+  // _id: string;
   title: number;
   description: string;
   category: string;
-  date: string;
+  // date: string;
 
 }
 
@@ -28,11 +28,15 @@ export class ProjectService {
     return this.http.get<Output>(this.url);
   }
 
-  addProject(title: string, description:string, category:string): Observable<IProject> {
-    return this.http.post<IProject>(this.url, {
-      title: title,
-      description: description,
-      category: category
+  addProject(ti: string, desc:string, cat:string): Observable<IProject> {
+    
+    console.log(ti);
+    console.log(desc);
+    console.log(cat);
+    return this.http.post<IProject>('https://node-todo-2021.herokuapp.com/projects', {
+      title: ti,
+      description: desc,
+      category: cat
     });
   }
 }

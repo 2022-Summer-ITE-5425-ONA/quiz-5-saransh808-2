@@ -15,29 +15,23 @@ export class AddprojectComponent implements OnInit {
 
   projectForm = new FormGroup({
     title: new FormControl<string | null>(null, [
-      Validators.required,
-      Validators.minLength(3),
+ 
     ]),
     description: new FormControl<string | null>(null, [
-      Validators.required,
-      Validators.minLength(3),
+     
     ]),
     category: new FormControl<string | null>(null, [
-      Validators.required,
-      Validators.minLength(3),
+
     ]),
   });
 
   onSubmit2() {
     console.log(this.projectForm);
-
-    // this.myProjectService.addProject(
-    //   title:this.projectForm.value.title,
-    //   description:this.projectForm.value.description!,
-    //   category:this.projectForm.value.category!
-    // );
-
-    
+    this.myProjectService.addProject(
+      this.projectForm.value.title!,
+      this.projectForm.value.description!,
+      this.projectForm.value.category!
+    );
     
   }
 

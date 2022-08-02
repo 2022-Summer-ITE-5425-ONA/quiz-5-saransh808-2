@@ -36,10 +36,6 @@ export class AddGroceryComponent implements OnInit {
       this.groceryForm.value.name!,
       this.groceryForm.value.quantity!
     );
-    // this.grocery.push({
-    //   id: 45,
-    //   name: this.groceryForm.value.name!,
-    //   quantity: this.groceryForm.value.quantity!,
-    // });
+    
   }
 }

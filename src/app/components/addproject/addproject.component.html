@@ -1,10 +1,10 @@
 <h2>Add Project - Reactive form</h2>
 
 <form [formGroup]="projectForm" (ngSubmit)="onSubmit2()">
-  Name: <input type="text" formControlName="title" />
-  <div *ngIf="projectForm.get('title')?.invalid">Name is required</div>
-  Quantity: <input type="text" formControlName="description" />
-  Quantity: <input type="text" formControlName="category" />
+  Title: <input type="text" formControlName="title" />
+  <!-- <div *ngIf="projectForm.get('title')?.invalid">Name is required</div> -->
+  Description: <input type="text" formControlName="description" />
+  Category: <input type="text" formControlName="category" />
   <br />
-  <input type="submit" value="Add Grocery" />
+  <input type="submit" value="Add Project" />
 </form>
